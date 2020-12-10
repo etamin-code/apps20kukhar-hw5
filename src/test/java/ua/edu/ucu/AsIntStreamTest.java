@@ -13,7 +13,7 @@ public class AsIntStreamTest {
 
     @Before
     public void init() {
-        int[] intArr = {-1, 0, 1, 2, 3}, emptyArr = {};
+        int[] intArr = {0, -1, 1, 2, 3}, emptyArr = {};
         intStream = AsIntStream.of(intArr);
         intStreamEmpty = AsIntStream.of(emptyArr);
     }
@@ -62,7 +62,7 @@ public class AsIntStreamTest {
 
 
 
-    
+
     @Test (expected = IllegalArgumentException.class)
     public void testStreamAverageEmpty() {
         intStreamEmpty.average();
