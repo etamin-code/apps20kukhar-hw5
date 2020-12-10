@@ -12,6 +12,7 @@ import org.junit.Before;
 public class StreamAppTest {
     
     private IntStream intStream;
+    private StreamApp streamApp = new StreamApp();
 
     @Before
     public void init() {
@@ -23,7 +24,7 @@ public class StreamAppTest {
     public void testStreamOperations() {
         System.out.println("streamOperations");
         int expResult = 42;
-        int result = StreamApp.streamOperations(intStream);
+        int result = streamApp.streamOperations(intStream);
         assertEquals(expResult, result);        
     }
 
@@ -31,7 +32,7 @@ public class StreamAppTest {
     public void testStreamToArray() {
         System.out.println("streamToArray");
         int[] expResult = {-1, 0, 1, 2, 3};
-        int[] result = StreamApp.streamToArray(intStream);
+        int[] result = streamApp.streamToArray(intStream);
         assertArrayEquals(expResult, result);        
     }
 
@@ -39,7 +40,7 @@ public class StreamAppTest {
     public void testStreamForEach() {
         System.out.println("streamForEach");
         String expResult = "-10123";
-        String result = StreamApp.streamForEach(intStream);
+        String result = streamApp.streamForEach(intStream);
         assertEquals(expResult, result);        
     }
     

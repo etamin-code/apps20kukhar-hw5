@@ -3,8 +3,6 @@ package ua.edu.ucu.stream;
 import ua.edu.ucu.function.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
 
 public class AsIntStream implements IntStream {
     private ArrayList<Integer> stream = new ArrayList<>();
@@ -85,9 +83,7 @@ public class AsIntStream implements IntStream {
         for (int i = 0; i < filtered.size(); i++) {
             intArray[i] = filtered.get(i);
         }
-        for (int el: intArray) {
-            System.out.println(el);
-        }
+
         return of(intArray);
     }
 
